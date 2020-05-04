@@ -8,20 +8,26 @@ using Microsoft.Extensions.Logging;
 namespace ProductivityTools.Learning.OAuth.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    [Route("Test")]
+    public class TestController : ControllerBase
     {
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<TestController> _logger;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public TestController(ILogger<TestController> logger)
         {
             _logger = logger;
         }
 
-        [HttpGet]
-        public DateTime Get()
+        [HttpPost("Date")]
+        public DateTime Date()
         {
             return DateTime.Now;
+        }
+
+        [HttpGet]
+        public string String()
+        {
+            return "pawel";
         }
     }
 }

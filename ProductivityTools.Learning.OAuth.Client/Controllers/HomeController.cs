@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using ProductivityTools.Learning.OAuth.Client.Models;
+using ProductivityTools.SimpleHttpPostClient;
 
 namespace ProductivityTools.Learning.OAuth.Client.Controllers
 {
@@ -20,6 +21,11 @@ namespace ProductivityTools.Learning.OAuth.Client.Controllers
 
         public IActionResult Index()
         {
+            HttpPostClient client = new HttpPostClient(true);
+            client.SetBaseUrl("https://localhost:44346");
+
+            var result1 = client.PostAsync<string>("Test", "Date",null);
+            var x = result1.GetAwaiter().GetResult();
             return View();
         }
 
