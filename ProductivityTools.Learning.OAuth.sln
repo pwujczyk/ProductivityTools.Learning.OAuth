@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Learning.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.IDP", "ProductivityTools.IDP\ProductivityTools.IDP.csproj", "{079095D2-0DE3-4211-820A-EF17D698B643}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Learning.OAuth.JS", "ProductivityTools.Learning.OAuth.JS\ProductivityTools.Learning.OAuth.JS.csproj", "{948FDCD6-A249-45C8-8F71-56D9F0396894}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{079095D2-0DE3-4211-820A-EF17D698B643}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{079095D2-0DE3-4211-820A-EF17D698B643}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{079095D2-0DE3-4211-820A-EF17D698B643}.Release|Any CPU.Build.0 = Release|Any CPU
+		{948FDCD6-A249-45C8-8F71-56D9F0396894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948FDCD6-A249-45C8-8F71-56D9F0396894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948FDCD6-A249-45C8-8F71-56D9F0396894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948FDCD6-A249-45C8-8F71-56D9F0396894}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
