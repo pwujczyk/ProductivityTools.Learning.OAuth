@@ -19,47 +19,54 @@ namespace ProductivityTools.IDP
 
         public static IEnumerable<ApiResource> Apis =>
             new ApiResource[]
-            { };
+            {
+                new ApiResource("api1", "My API")
+            };
 
         public static IEnumerable<Client> Clients =>
             new Client[]
             {
-            new Client{
-                ClientName="PW Gallery",
-                ClientId="pwgalleryclient",
-                AllowedGrantTypes=GrantTypes.Code,
-                RedirectUris=new List<string>
-                {
-                    "https://localhost:6002/signin-oidc"
-                },
-                AllowedScopes =
-                {
-                    IdentityServerConstants.StandardScopes.OpenId,
-                    IdentityServerConstants.StandardScopes.Profile
-                },
-                ClientSecrets=
-                {
-                    new Secret("secret".Sha256())
-                }
-            } ,
+                //new Client{
+                //    ClientName="PW Gallery",
+                //    ClientId="pwgalleryclient",
+                //    AllowedGrantTypes=GrantTypes.Code,
+                //    RedirectUris=new List<string>
+                //    {
+                //        "https://localhost:6002/signin-oidc"
+                //    },
+                //    AllowedScopes =
+                //    {
+                //        IdentityServerConstants.StandardScopes.OpenId,
+                //        IdentityServerConstants.StandardScopes.Profile,
+                //        "api1"
+                //    },
+                //    ClientSecrets=
+                //    {
+                //        new Secret("secret".Sha256())
+                //    }
+                //} ,
             new Client
-{
-    ClientId = "js",
-    ClientName = "JavaScript Client",
-    AllowedGrantTypes = GrantTypes.Implicit,
-    AllowAccessTokensViaBrowser = true,
+                {
+                    ClientId = "js",
+                    ClientName = "JavaScript Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowAccessTokensViaBrowser = true,
 
-    RedirectUris =           { "https://localhost:6002/callback.html" },
-    PostLogoutRedirectUris = { "https://localhost:6002/index.html" },
-    AllowedCorsOrigins =     { "https://localhost:6002" },
+                    RedirectUris =           { "https://localhost:6002/callback.html" },
+                    PostLogoutRedirectUris = { "https://localhost:6002/index.html" },
+                    AllowedCorsOrigins =
+                    {
+                        "https://localhost:6002",
+                        "http://localhost:6001"
+                    },
 
-    AllowedScopes =
-    {
-        IdentityServerConstants.StandardScopes.OpenId,
-        IdentityServerConstants.StandardScopes.Profile,
-        "api1"
-    }
-}
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "api1"
+                    }
+                }
             };
 
     }

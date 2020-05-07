@@ -20,6 +20,7 @@ namespace ProductivityTools.Learning.OAuth.Client
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.UseUrls("http://localhost:7001", "https://localhost:7002");
                     webBuilder.UseStartup<Startup>();
                 });
     }

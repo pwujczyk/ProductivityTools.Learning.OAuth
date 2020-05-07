@@ -20,6 +20,19 @@ namespace ProductivityTools.IDP
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvcCore()
+                .AddAuthorization();
+               // .AddJsonFormatters();
+
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(options =>
+                {
+                    options.Authority = "https://localhost:5001";
+                    options.RequireHttpsMetadata = false;
+
+                    options.ApiName = "api1";
+                });
+
             // uncomment, if you want to add an MVC-based UI
             services.AddControllersWithViews();
 
@@ -37,7 +50,7 @@ namespace ProductivityTools.IDP
                 // this defines a CORS policy called "default"
                 options.AddPolicy("default", policy =>
                 {
-                    policy.WithOrigins("https://localhost:6002")
+                    policy.AllowAnyOrigin()//.WithOrigins("https://localhost:6002")
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });
@@ -58,12 +71,15 @@ namespace ProductivityTools.IDP
             
             app.UseIdentityServer();
 
-            
+
             // uncomment, if you want to add MVC
+            app.UseAuthentication();
+
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
             });
         }
     }
