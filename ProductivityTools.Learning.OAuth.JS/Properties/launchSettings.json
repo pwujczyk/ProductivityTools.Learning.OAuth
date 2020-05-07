@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ProductivityTools.Learning.OAuth.JS": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:6002/"
+    }
+  }
+}

@@ -30,7 +30,7 @@ namespace ProductivityTools.IDP
                 AllowedGrantTypes=GrantTypes.Code,
                 RedirectUris=new List<string>
                 {
-                    "https://localhost:44371/signin-oidc"
+                    "https://localhost:6002/signin-oidc"
                 },
                 AllowedScopes =
                 {
@@ -41,7 +41,26 @@ namespace ProductivityTools.IDP
                 {
                     new Secret("secret".Sha256())
                 }
-            } };
+            } ,
+            new Client
+{
+    ClientId = "js",
+    ClientName = "JavaScript Client",
+    AllowedGrantTypes = GrantTypes.Implicit,
+    AllowAccessTokensViaBrowser = true,
+
+    RedirectUris =           { "https://localhost:6002/callback.html" },
+    PostLogoutRedirectUris = { "https://localhost:6002/index.html" },
+    AllowedCorsOrigins =     { "https://localhost:6002" },
+
+    AllowedScopes =
+    {
+        IdentityServerConstants.StandardScopes.OpenId,
+        IdentityServerConstants.StandardScopes.Profile,
+        "api1"
+    }
+}
+            };
 
     }
 }
