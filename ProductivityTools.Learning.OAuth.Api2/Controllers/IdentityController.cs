@@ -19,7 +19,7 @@ namespace ProductivityTools.Learning.OAuth.Api2.Controllers
         }
 
         [HttpGet("Paid")]
-        //[Authorize]
+        [Authorize]
         public IActionResult Paid()
         {
             return new JsonResult($"Paid: {DateTime.Now.ToString()}");
