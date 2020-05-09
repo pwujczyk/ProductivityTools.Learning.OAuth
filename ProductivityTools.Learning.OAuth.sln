@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Learning.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.IdentityServer", "ProductivityTools.IdentityServer\ProductivityTools.IdentityServer.csproj", "{DF576F3E-B84F-4188-ACC1-6BA1B4890C75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Learning.OAuth.Api2", "ProductivityTools.Learning.OAuth.Api2\ProductivityTools.Learning.OAuth.Api2.csproj", "{06DFD370-2E58-4129-8149-B062F51872B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DF576F3E-B84F-4188-ACC1-6BA1B4890C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF576F3E-B84F-4188-ACC1-6BA1B4890C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF576F3E-B84F-4188-ACC1-6BA1B4890C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06DFD370-2E58-4129-8149-B062F51872B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06DFD370-2E58-4129-8149-B062F51872B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06DFD370-2E58-4129-8149-B062F51872B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06DFD370-2E58-4129-8149-B062F51872B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
