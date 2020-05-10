@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Learning.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductivityTools.Learning.OAuth.Client2", "ProductivityTools.Learning.OAuth.Client2\ProductivityTools.Learning.OAuth.Client2.csproj", "{A4C69A7C-A350-4A98-BA34-A4B98B247B93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductivityTools.Learning.OAuth.MvcClient", "ProductivityTools.Learning.OAuth.MvcClient\ProductivityTools.Learning.OAuth.MvcClient.csproj", "{7BDA9C3C-A6C5-4A09-8A81-6E637D215729}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A4C69A7C-A350-4A98-BA34-A4B98B247B93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4C69A7C-A350-4A98-BA34-A4B98B247B93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4C69A7C-A350-4A98-BA34-A4B98B247B93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BDA9C3C-A6C5-4A09-8A81-6E637D215729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BDA9C3C-A6C5-4A09-8A81-6E637D215729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BDA9C3C-A6C5-4A09-8A81-6E637D215729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BDA9C3C-A6C5-4A09-8A81-6E637D215729}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
