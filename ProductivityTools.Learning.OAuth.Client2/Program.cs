@@ -14,6 +14,7 @@ namespace ProductivityTools.Learning.OAuth.Client2
             Console.WriteLine("Hello World!");
             Thread.Sleep(5000);
             Work().GetAwaiter().GetResult();
+            Console.ReadLine();
         }
 
         private static async Task Work()

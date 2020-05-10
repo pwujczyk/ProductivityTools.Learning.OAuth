@@ -44,7 +44,7 @@ namespace ProductivityTools.Learning.OAuth.Api2
                 endpoints.MapGet("/", async context =>
                 {
                     
-                    await context.Response.WriteAsync("Hello World!");
+                    await context.Response.WriteAsync("Hello World! This is api addres");
                 });
                 endpoints.MapControllers();
             });
