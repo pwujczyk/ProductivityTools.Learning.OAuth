@@ -25,6 +25,18 @@ namespace ProductivityTools.Learning.OAuth.Api2
                 options.RequireHttpsMetadata = false;
                 options.Audience = "api1";
             });
+
+
+            services.AddCors(options =>
+            {
+                // this defines a CORS policy called "default"
+                options.AddPolicy("default", policy =>
+                {
+                    policy.AllowAnyOrigin()//.WithOrigins("https://localhost:6002")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,7 +46,7 @@ namespace ProductivityTools.Learning.OAuth.Api2
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors("default");
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();

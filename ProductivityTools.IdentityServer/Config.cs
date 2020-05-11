@@ -64,7 +64,29 @@ namespace ProductivityTools.IdentityServer
                         "api1"
                     },
                     AllowOfflineAccess=true
+                }
+                ,
+                  new Client
+                {
+                    ClientId = "js",
+                    ClientName = "JavaScript Client",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    AllowAccessTokensViaBrowser = true,
 
+                    RedirectUris =           { "https://localhost:6002/callback.html" },
+                    PostLogoutRedirectUris = { "https://localhost:6002/index.html" },
+                    AllowedCorsOrigins =
+                    {
+                        "https://localhost:6002",
+                        "http://localhost:6001"
+                    },
+
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "api1"
+                    }
                 }
             };
 

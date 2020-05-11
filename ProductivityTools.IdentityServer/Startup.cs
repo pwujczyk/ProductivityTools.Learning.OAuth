@@ -30,6 +30,17 @@ namespace ProductivityTools.IdentityServer
 
             // not recommended for production - you need to store your key material somewhere secure
             builder.AddDeveloperSigningCredential();
+
+            services.AddCors(options =>
+            {
+                // this defines a CORS policy called "default"
+                options.AddPolicy("default", policy =>
+                {
+                    policy.AllowAnyOrigin()//.WithOrigins("https://localhost:6002")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
         }
 
         public void Configure(IApplicationBuilder app)
@@ -38,7 +49,7 @@ namespace ProductivityTools.IdentityServer
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            app.UseCors("default");
             // uncomment if you want to add MVC
             app.UseStaticFiles();
             app.UseRouting();
