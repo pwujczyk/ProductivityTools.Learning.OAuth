@@ -26,7 +26,6 @@ namespace ProductivityTools.Learning.OAuth.Api2
                 options.Audience = "api1";
             });
 
-
             services.AddCors(options =>
             {
                 // this defines a CORS policy called "default"
